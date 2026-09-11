@@ -15,13 +15,9 @@ app.get("/home",async(req,res)=> {
 
 app.get("/getSum/:a/:b",async(req,res)=> {
     const {a,b} = req.params;
-    const numA = parseInt(a, 10);
-    const numB = parseInt(b, 10);
-    if (!Number.isInteger(numA) || !Number.isInteger(numB)) {
-        return res.status(400).json({ error: 'Invalid numbers' });
-    }
+
     res.json({
-        ans: sum(numA, numB)
+        ans:sum(parseInt(a),parseInt(b))
     });
 }
 )
