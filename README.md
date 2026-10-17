@@ -1,1 +1,3 @@
 # CI-CD
+
+## Learning Phase
